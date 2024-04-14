@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  * {
+    @apply font-Pretendard;
+  }
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+  display: flex;
+}
+
+#root {
+  background-color: white;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  height: 100%;
+  box-shadow: rgba(100, 100, 100, 0.2) 0px 0px 29px 0px;
+}
+
+.reservation-list {
+  overflow-y: scroll;
+  transition: max-height 0.2s ease-in-out;
+  max-height: 0;
+}
+
+.reservation-list.open {
+  max-height: 20rem;
+}
